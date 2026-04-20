@@ -1,118 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Super Creator Tools</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-body{
-font-family:Arial;
-background:#0b0f19;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-h1{
-color:#00ffc3;
-}
-
-input{
-padding:12px;
-width:300px;
-border:none;
-border-radius:8px;
-margin-top:20px;
-}
-
-button{
-padding:12px 16px;
-margin:8px;
-border:none;
-border-radius:8px;
-background:#6366f1;
-color:white;
-cursor:pointer;
-}
-
-#result{
-margin-top:25px;
-background:#1f2937;
-padding:20px;
-border-radius:10px;
-width:90%;
-margin-left:auto;
-margin-right:auto;
-min-height:60px;
-}
-
-.copy{
-background:#00ffc3;
-color:black;
-}
-
-</style>
-
+<title>Creator Tools</title>
 </head>
 
-<body>
+<body style="text-align:center;font-family:Arial;background:#111;color:white;padding:30px;">
 
-<h1>🚀 Super Creator Tools</h1>
+<h1>🚀 Creator Tools</h1>
 
-<input id="topic" placeholder="Enter your topic">
+<input id="topic" placeholder="Enter topic" style="padding:10px;width:200px;">
 
-<br>
+<br><br>
 
-<button onclick="title()">Title</button>
-<button onclick="script()">Script</button>
-<button onclick="hook()">Hook</button>
-<button onclick="tags()">Tags</button>
-<button onclick="idea()">Idea</button>
+<button onclick="title()">Title Generate</button>
 
-<button class="copy" onclick="copyText()">Copy Result</button>
-
-<div id="result">Your result will appear here...</div>
+<div id="result" style="margin-top:20px;font-size:20px;"></div>
 
 <script>
 
-function getTopic(){
-return document.getElementById("topic").value
-}
-
 function title(){
-let t=getTopic()
-document.getElementById("result").innerText=
-"🔥 Top 10 Secrets About "+t+" You Must Know!"
+
+let topic = document.getElementById("topic").value
+
+if(topic==""){
+document.getElementById("result").innerText="Pehle topic daalo 😎"
+return
 }
 
-function script(){
-let t=getTopic()
-document.getElementById("result").innerText=
-"आज हम बात करने वाले हैं "+t+" के बारे में... और इसके amazing facts!"
+document.getElementById("result").innerText =
+"🔥 Top 10 Secrets About " + topic
+
 }
 
-function hook(){
-let t=getTopic()
-document.getElementById("result").innerText=
-"अगर आप "+t+" नहीं जानते तो आप बहुत बड़ा knowledge miss कर रहे हो!"
-}
+</script>
 
-function tags(){
-let t=getTopic()
-document.getElementById("result").innerText=
-"#viral #shorts #trending #"+t+" #youtube"
-}
-
-function idea(){
-let t=getTopic()
-document.getElementById("result").innerText=
-"3 shocking facts about "+t+" that will blow your mind"
-}
-
-function copyText(){
+</body>
+</html>function copyText(){
 let text=document.getElementById("result").innerText
 navigator.clipboard.writeText(text)
 alert("Copied!")
