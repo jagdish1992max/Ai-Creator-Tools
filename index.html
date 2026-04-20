@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Creator Tools</title>
+<title>Test Tool</title>
 </head>
 
-<body style="text-align:center;font-family:Arial;background:#111;color:white;padding:30px;">
+<body style="text-align:center;font-family:Arial;padding:30px;background:#111;color:white;">
 
-<h1>🚀 Creator Tools</h1>
+<h1>🚀 Test Creator Tool</h1>
 
 <input id="topic" placeholder="Enter topic" style="padding:10px;width:200px;">
 
 <br><br>
 
-<button onclick="title()">Title Generate</button>
+<button onclick="generateTitle()">Title Generate</button>
 
-<div id="result" style="margin-top:20px;font-size:20px;"></div>
+<h2 id="result"></h2>
 
 <script>
 
-function title(){
+function generateTitle(){
 
-let topic = document.getElementById("topic").value
+let topic = document.getElementById("topic").value;
 
-if(topic==""){
-document.getElementById("result").innerText="Pehle topic daalo 😎"
-return
+if(!topic){
+document.getElementById("result").innerText = "❌ Topic daalo pehle";
+return;
 }
 
 document.getElementById("result").innerText =
-"🔥 Top 10 Secrets About " + topic
+"🔥 Top 10 Secrets About " + topic;
 
 }
 
 </script>
 
 </body>
-</html>function copyText(){
-let text=document.getElementById("result").innerText
-navigator.clipboard.writeText(text)
-alert("Copied!")
-}
-
-</script>
-
-</body>
-
-                               </html>
+</html>
