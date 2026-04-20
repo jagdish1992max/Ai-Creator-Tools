@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+<title>Super Creator Tools</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b0f19;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+h1{
+color:#00ffc3;
+}
+
+input{
+padding:12px;
+width:300px;
+border:none;
+border-radius:8px;
+margin-top:20px;
+}
+
+button{
+padding:12px 16px;
+margin:8px;
+border:none;
+border-radius:8px;
+background:#6366f1;
+color:white;
+cursor:pointer;
+}
+
+#result{
+margin-top:25px;
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+min-height:60px;
+}
+
+.copy{
+background:#00ffc3;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🚀 Super Creator Tools</h1>
+
+<input id="topic" placeholder="Enter your topic">
+
+<br>
+
+<button onclick="title()">Title</button>
+<button onclick="script()">Script</button>
+<button onclick="hook()">Hook</button>
+<button onclick="tags()">Tags</button>
+<button onclick="idea()">Idea</button>
+
+<button class="copy" onclick="copyText()">Copy Result</button>
+
+<div id="result">Your result will appear here...</div>
+
+<script>
+
+function getTopic(){
+return document.getElementById("topic").value
+}
+
+function title(){
+let t=getTopic()
+document.getElementById("result").innerText=
+"🔥 Top 10 Secrets About "+t+" You Must Know!"
+}
+
+function script(){
+let t=getTopic()
+document.getElementById("result").innerText=
+"आज हम बात करने वाले हैं "+t+" के बारे में... और इसके amazing facts!"
+}
+
+function hook(){
+let t=getTopic()
+document.getElementById("result").innerText=
+"अगर आप "+t+" नहीं जानते तो आप बहुत बड़ा knowledge miss कर रहे हो!"
+}
+
+function tags(){
+let t=getTopic()
+document.getElementById("result").innerText=
+"#viral #shorts #trending #"+t+" #youtube"
+}
+
+function idea(){
+let t=getTopic()
+document.getElementById("result").innerText=
+"3 shocking facts about "+t+" that will blow your mind"
+}
+
+function copyText(){
+let text=document.getElementById("result").innerText
+navigator.clipboard.writeText(text)
+alert("Copied!")
+}
+
+</script>
+
+</body>
+
+                               </html>
