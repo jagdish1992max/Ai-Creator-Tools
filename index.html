@@ -1,127 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Creator Tools</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#0b0f19;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-/* HEADER */
-h1{
-color:#00ffc3;
-}
-
-/* INPUT */
-input{
-width:90%;
-max-width:400px;
-padding:12px;
-border:none;
-border-radius:10px;
-margin-top:10px;
-}
-
-/* BUTTONS */
-.buttons{
-margin-top:20px;
-}
-
-button{
-padding:10px 14px;
-margin:5px;
-border:none;
-border-radius:8px;
-background:#1f2937;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#00ffc3;
-color:black;
-}
-
-/* RESULT BOX */
-#result{
-margin-top:25px;
-background:#111827;
-padding:20px;
-border-radius:10px;
-min-height:80px;
-width:90%;
-max-width:500px;
-margin-left:auto;
-margin-right:auto;
-text-align:left;
-}
-
-</style>
-
+<title>Test</title>
 </head>
 
-<body>
+<body style="text-align:center;font-family:Arial;padding:50px;">
 
-<h1>🚀 AI Creator Tools</h1>
+<h1>Test Button</h1>
 
-<input id="topic" placeholder="Enter your topic">
+<input id="topic" placeholder="Enter text">
 
-<div class="buttons">
+<br><br>
 
-<button onclick="gen('title')">Title</button>
-<button onclick="gen('script')">Script</button>
-<button onclick="gen('hook')">Hook</button>
-<button onclick="gen('tags')">Tags</button>
-<button onclick="gen('idea')">Idea</button>
+<button onclick="test()">Click Me</button>
 
-</div>
-
-<div id="result">Your result will appear here...</div>
+<h2 id="result"></h2>
 
 <script>
 
-function gen(type){
-
-let topic=document.getElementById("topic").value;
-
-if(!topic){
-document.getElementById("result").innerText="⚠️ Please enter a topic";
-return;
-}
-
-let result="";
-
-if(type=="title"){
-result="🔥 Top 10 Secrets About "+topic+" You Must Know";
-}
-
-if(type=="script"){
-result="🎬 Today we talk about "+topic+" in simple way...";
-}
-
-if(type=="hook"){
-result="⚡ If you don't know "+topic+", you're missing something BIG!";
-}
-
-if(type=="tags"){
-result="#viral #trending #shorts #"+topic;
-}
-
-if(type=="idea"){
-result="💡 3 shocking facts about "+topic;
-}
-
-document.getElementById("result").innerText=result;
-
+function test(){
+document.getElementById("result").innerText = "Button Working ✔️"
 }
 
 </script>
